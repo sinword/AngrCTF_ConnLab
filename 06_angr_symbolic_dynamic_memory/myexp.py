@@ -18,8 +18,8 @@ def Go():
     initial_state.memory.store(pointer_to_malloc_memory_address0, fake_heap_address0, endness=project.arch.memory_endness)
     initial_state.memory.store(pointer_to_malloc_memory_address1, fake_heap_address1, endness=project.arch.memory_endness)
 
-    initial_state.memory.store(fake_heap_address0, password0)  
-    initial_state.memory.store(fake_heap_address1, password1)
+    initial_state.memory.store(fake_heap_address0, passwd0)  
+    initial_state.memory.store(fake_heap_address1, passwd1)
 
     simulation = project.factory.simgr(initial_state)
     

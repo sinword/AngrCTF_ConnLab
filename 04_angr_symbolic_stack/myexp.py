@@ -4,7 +4,7 @@ import claripy
 def Go():
     path_to_binary = "./04_angr_symbolic_stack" 
     project = angr.Project(path_to_binary, auto_load_libs=False)
-    start_address = 0x8048697
+    start_address = 0x08048697
     initial_state = project.factory.blank_state(addr=start_address)
 
     initial_state.regs.ebp = initial_state.regs.esp
